@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react";
-import { developedSkills } from "../CONTENT";
+import { developedSkills } from "../../CONTENT";
+import "./DevelopedSkills.css";
 
 export default function DevelopedSkills() {
   const skillRefs = useRef([]);
@@ -43,27 +44,25 @@ export default function DevelopedSkills() {
   }, [hasCheckedVisibility]);
 
   return (
-    <section className="section" id="section-3">
+    <section className="developed-skills-section">
       <h2>Umiejętności, które rozwijam</h2>
       <p>
         Nieustannie rozwijam swoje pasje i umiejętności, aby osiągać nowe cele.
       </p>
-      <div id="grid-3-section-3">
-        {developedSkills.map((items, index) => {
-          return (
-            <div
-              key={index}
-              className="grid-3-div"
-              ref={(el) => (skillRefs.current[index] = el)}
-              style={{
-                transitionDelay: `${index * 100}ms`,
-              }}
-            >
-              <img src={items.img} alt={items.alt} className="skills-learn" />
-              <p>{items.name}</p>
-            </div>
-          );
-        })}
+      <div className="skills-grid">
+        {developedSkills.map((item, index) => (
+          <div
+            key={index}
+            className="skill-item"
+            ref={(el) => (skillRefs.current[index] = el)}
+            style={{
+              transitionDelay: `${index * 100}ms`,
+            }}
+          >
+            <img src={item.img} alt={item.alt} className="skills-image" />
+            <p>{item.name}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

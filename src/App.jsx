@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Author from "./components/Author";
-import DevelopedSkills from "./components/DevelopedSkills";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Interests from "./components/Interests";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import Projects from "./components/Projects";
+import Author from "./components/Author/Author";
+import DevelopedSkills from "./components/DevelopedSkills/DevelopedSkills";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Interests from "./components/Interests/Interests";
+import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact";
+import Projects from "./components/Projects_/Projects";
 
 const components = (
   <>
