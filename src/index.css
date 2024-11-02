@@ -309,6 +309,7 @@ header {
   width: 10rem;
 }
 .footer-4-div a {
+  font-size: 1rem;
   margin: 0.1rem;
   text-align: center;
   text-decoration: none;
@@ -316,6 +317,14 @@ header {
   transition: 0.3s ease;
 }
 .footer-4-btn {
+  font-size: 1rem;
+  margin: 0.1rem;
+  border: none;
+  background-color: transparent;
+  color: wheat;
+  transition: 0.3s ease;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 200;
   cursor: pointer;
 }
 .footer-4-btn:hover {

@@ -39,6 +39,14 @@ export default function Header({ onSelect, selectedSection }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollPosition]);
 
+  useEffect(() => {
+    if (menuActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [menuActive]);
+
   return (
     <header
       style={{

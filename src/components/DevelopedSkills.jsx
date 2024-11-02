@@ -13,11 +13,11 @@ export default function DevelopedSkills() {
 
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            skillRefs.current.forEach((skill) => {
+              skill.classList.add("visible");
+            });
             setHasCheckedVisibility(true);
             observer.disconnect();
-          } else {
-            entry.target.classList.remove("visible");
           }
         });
       },

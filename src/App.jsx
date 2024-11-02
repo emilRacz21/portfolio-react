@@ -20,7 +20,7 @@ const components = (
 function App() {
   const [page, setPage] = useState(components);
   const [fade, setFade] = useState(false);
-  const [selectedSection, setSelectedSection] = useState(0); // Stan dla aktualnie wybranej sekcji
+  const [selectedSection, setSelectedSection] = useState(0);
 
   const pages = {
     0: components,
@@ -36,7 +36,7 @@ function App() {
       if (value === "3") {
         window.open("https://gofile.io/d/x7i5B7");
       } else {
-        setSelectedSection(value); // Aktualizacja wybranej sekcji
+        setSelectedSection(value);
         setPage(pages[value] || components);
       }
 
@@ -55,7 +55,7 @@ function App() {
     <>
       <Header onSelect={handleButtons} selectedSection={selectedSection} />
       <main className={fade ? "fade-out" : "fade-in"}>{page}</main>
-      <Footer />
+      <Footer onClick={handleButtons} />
     </>
   );
 }

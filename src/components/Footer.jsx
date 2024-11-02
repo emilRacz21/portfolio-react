@@ -1,5 +1,5 @@
 import { footer } from "../CONTENT";
-export default function Footer() {
+export default function Footer({ ...rest }) {
   return (
     <footer id="footer-4">
       <div className="footer-4-div">
@@ -12,8 +12,12 @@ export default function Footer() {
       </div>
       <div className="footer-4-div">
         <h3>{footer.view}</h3>
-        <a className="footer-4-btn">{footer.about}</a>
-        <a className="footer-4-btn">{footer.myProj}</a>
+        <button {...rest} value={0} className="footer-4-btn">
+          {footer.about}
+        </button>
+        <button {...rest} value={1} className="footer-4-btn">
+          {footer.myProj}
+        </button>
       </div>
       <div className="footer-4-div">
         <h3>{footer.contact}</h3>
