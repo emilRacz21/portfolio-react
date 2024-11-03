@@ -34,7 +34,7 @@ function App() {
     setTimeout(() => {
       smoothScroll();
       if (value === "3") {
-        window.open("https://gofile.io/d/x7i5B7");
+        window.open("https://gofile.io/d/K8YjbH");
       } else {
         setSelectedSection(value);
         setPage(pages[value] || components);
