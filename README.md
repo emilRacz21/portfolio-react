@@ -19,5 +19,5 @@ You can view the live version of my [portfolio](https://portfolio-emilr.netlify.
 
 
 ## Get Started
-Clone the repository and run `npm install` to install dependencies. Start the application with `npm start`.
+Clone the repository and run `npm install` to install dependencies. Start the application with `npm run dev`.
 
