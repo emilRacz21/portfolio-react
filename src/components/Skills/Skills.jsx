@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react";
 import { skillsSection } from "../../CONTENT";
-import "./Skills.css";
+import "./Skills.scss";
 
 export default function Skills() {
   const skillRefs = useRef([]);

@@ -1,0 +1,63 @@
+@import "../../index.scss";
+
+.author-section {
+  padding: 4rem;
+  display: grid;
+  @include justify-align-center;
+  grid-template-columns: 1fr 1fr;
+
+  .author-info {
+    padding: 2rem;
+    @include allCenter;
+
+    h1 {
+      margin: 1rem 0;
+      font-weight: 900;
+      color: $main-color;
+      text-align: start;
+      font-size: $author-main-font;
+    }
+
+    p {
+      margin: 0;
+      text-align: justify;
+      font-size: $author-p-font;
+      font-weight: 100;
+      color: $main-color;
+    }
+  }
+
+  .author-photo {
+    padding: 2rem;
+    max-width: 100%;
+    height: auto;
+    width: 44rem;
+    animation: pulse 20s infinite;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+
+    .author-info {
+      padding: 0;
+
+      h1 {
+        margin: 2rem 1rem;
+        text-align: center;
+        font-size: 5rem;
+      }
+
+      p {
+        padding: 2rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .author-photo {
+      padding: 0;
+      order: -1;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { footer } from "../../CONTENT";
-import "./Footer.css";
+import "./Footer.scss";
 
 export default function Footer({ ...rest }) {
   return (

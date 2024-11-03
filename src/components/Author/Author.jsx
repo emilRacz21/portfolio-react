@@ -1,5 +1,5 @@
 import myPhoto from "../../assets/my photo/PHOTO.png";
-import "./Author.css";
+import "./Author.scss";
 import { authorSection } from "../../CONTENT";
 
 export default function Author() {

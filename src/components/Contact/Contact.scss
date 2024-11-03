@@ -1,30 +1,23 @@
+@import "../../index.scss";
 .contact-section {
   padding: 0rem 3rem 0rem 3rem;
 }
-
 .contact-grid {
   padding: 4rem 0 0 0;
   display: grid;
-  align-items: center;
-  justify-content: center;
+  @include justify-align-center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
 }
 
 .contact-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: aliceblue;
+  @include justify-align-flex-flex-center;
   margin: 1rem;
-  font-size: 1.2rem;
+  font-size: $desc-font;
 }
 
 .contact-details {
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
+  @include displays;
   align-items: center;
 }
 
@@ -34,17 +27,17 @@
 }
 
 .contact-title {
-  color: rgb(101, 88, 67);
-  font-size: 3rem;
+  color: $main-color;
+  font-size: $second-font;
   font-weight: 900;
   margin: 0;
 }
 
 .contact-link {
-  font-size: 1.6rem;
-  color: rgb(143, 139, 132);
+  font-size: $desc-font;
+  color: $main-color;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: $def-transition;
 }
 
 .contact-link:hover {
@@ -59,8 +52,7 @@
 
   .contact-grid {
     padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
+    @include displays;
   }
 
   .contact-title {

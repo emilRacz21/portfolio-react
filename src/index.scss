@@ -1,0 +1,93 @@
+// Variables
+$header-color: rgb(235, 224, 202);
+$container-color: wheat;
+$main-color-white: antiquewhite;
+$main-color: rgb(101, 88, 67);
+$footer-padding: 2rem;
+$footer-font-size: 1rem;
+$footer-transition: 0.3s ease;
+$desc-font: 1.3rem;
+$second-font: 3rem;
+$author-main-font: 4.5rem;
+$author-p-font: 1.55rem;
+$mobile-second-font: 3.5rem;
+$def-transition: 0.3s ease;
+
+@mixin displays {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+@mixin allCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin justify-align-center {
+  justify-items: center;
+  align-items: center;
+}
+@mixin justify-align-flex-flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin lef-right {
+  left: 0;
+  right: 0;
+}
+@mixin left-top-padding-margin-0 {
+  left: 0;
+  margin: 0;
+  top: 0;
+  padding: 0;
+}
+@mixin height-width-v {
+  height: 100vh;
+  width: 100vw;
+}
+@mixin height-width-100 {
+  width: 100%;
+  height: 100%;
+}
+@mixin interests {
+  padding: 1rem;
+  margin: 0;
+  justify-content: center;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+}
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+body,
+html {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+main {
+  padding-top: 7.3rem;
+}

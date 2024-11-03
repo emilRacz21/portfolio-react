@@ -1,0 +1,60 @@
+@import "../../index.scss";
+.interests-section {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  h2 {
+    margin-bottom: 0;
+    color: $main-color;
+    text-align: center;
+    font-weight: 700;
+    font-size: $second-font;
+  }
+}
+
+.interests-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+
+  p {
+    border-radius: 10px;
+    background-color: $main-color-white;
+    color: $main-color;
+    padding: 10px 20px;
+    margin: 0.2rem;
+  }
+}
+
+.interests-grid:nth-child(2),
+.interests-grid:nth-child(4) {
+  grid-row: 2;
+  padding: 2rem;
+  @include flex-justify-center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1000px) {
+  .interests-section {
+    padding: 0.6rem;
+    @include displays;
+
+    h2 {
+      text-align: center;
+      display: inline;
+      margin: 0;
+      padding: 3.2rem 2rem 0 2rem;
+      font-size: 3rem;
+    }
+  }
+
+  .interests-grid:nth-child(2) {
+    @include interests;
+  }
+
+  .interests-grid:nth-child(4) {
+    @include interests;
+    padding-bottom: 3rem;
+  }
+}

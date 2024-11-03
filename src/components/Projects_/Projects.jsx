@@ -1,5 +1,5 @@
 import { projects, projectTitle } from "../../CONTENT";
-import "./Projects.css";
+import "./Projects.scss";
 
 export default function Projects() {
   return (

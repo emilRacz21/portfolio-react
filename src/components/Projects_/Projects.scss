@@ -1,17 +1,20 @@
+@import "../../index.scss";
 .projects-section {
   padding: 0;
 }
 
 #section-6 h2 {
-  color: rgb(101, 88, 67);
+  color: $main-color;
   font-weight: 900;
   text-align: center;
-  font-size: 4.5rem;
+  font-size: $author-main-font;
+  margin-top: 2.5rem;
   margin-bottom: 0;
 }
 
 .project-title {
   font-size: 1.3rem;
+  margin-bottom: 3.5rem;
   text-align: center;
 }
 
@@ -24,25 +27,27 @@
   grid-template-columns: 1fr 1fr;
   border-radius: 15px;
   overflow: hidden;
+
+  img {
+    @include height-width-100;
+    object-fit: cover;
+  }
 }
 
 .project-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include allCenter;
   padding: 2rem;
-}
 
-.project-text h3 {
-  font-weight: 800;
-  color: rgb(101, 88, 67);
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.project-text p {
-  text-align: justify;
-  font-size: 1.3rem;
+  h3 {
+    font-weight: 800;
+    color: $main-color;
+    margin: 0;
+    font-size: $author-p-font;
+  }
+  p {
+    text-align: justify;
+    font-size: $desc-font;
+  }
 }
 
 .project-btn-live,
@@ -51,45 +56,36 @@
 }
 
 .project-btn-live {
-  border: 1.9px solid rgb(101, 88, 67);
-  color: rgb(101, 88, 67);
+  border: 1.9px solid $main-color;
+  color: $main-color;
   padding: 1.3vh 1vw;
   background-color: transparent;
   cursor: pointer;
   transition: 0.3s ease;
-}
 
-.project-btn-live:hover {
-  transform: scale(0.9);
+  &:hover {
+    transform: scale(0.9);
+  }
 }
 
 .project-btn-source-code {
   padding: 0 1rem;
   border: none;
   background-color: transparent;
-  color: rgb(101, 88, 67);
+  color: $main-color;
   transition: 0.3s ease;
   cursor: pointer;
-}
 
-.project-btn-source-code:hover {
-  transform: scale(0.9);
+  &:hover {
+    transform: scale(0.9);
+  }
 }
 
 .img-project {
   width: auto;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include justify-align-flex-flex-center;
   overflow: hidden;
-}
-
-.project-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 @media (max-width: 1000px) {
@@ -101,7 +97,7 @@
   }
 
   .project-title {
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 0rem 2rem 1rem 2rem;
   }
 
   .project-container {
@@ -109,15 +105,13 @@
     box-shadow: none;
     background-color: rgba(250, 235, 215, 0.568);
     margin: 3rem 0;
-    display: flex;
-    flex-direction: column;
+    @include displays;
   }
 
   .project-text {
     padding: 2rem;
-  }
-
-  .project-text p {
-    padding: 0;
+    p {
+      padding: 0;
+    }
   }
 }

@@ -1,0 +1,68 @@
+@import "../../index.scss";
+
+.developed-skills-section {
+  padding: 4rem;
+  background-color: $main-color-white;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.104);
+  text-align: center;
+
+  h2 {
+    color: $main-color;
+    font-size: $second-font;
+    margin: 0;
+  }
+
+  p {
+    font-size: $desc-font;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .skills-grid {
+    @include flex-justify-center;
+
+    .skill-item {
+      transform: scale(0) translateY(20px);
+      opacity: 0;
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+      padding: 1rem;
+      @include justify-align-flex-flex-center;
+
+      &.visible {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+
+      p {
+        font-size: $desc-font;
+      }
+    }
+  }
+
+  .skills-image {
+    margin: 2rem;
+    width: 30%;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 2rem 0.5rem;
+    padding-bottom: 2.7rem;
+
+    h2 {
+      font-size: $mobile-second-font;
+      padding: 0.6rem;
+      padding-top: 1rem;
+      padding-bottom: 0;
+      margin: 0;
+    }
+
+    .skills-grid {
+      @include displays;
+
+      .skill-item img {
+        margin: 0.5rem;
+        width: 9rem;
+      }
+    }
+  }
+}

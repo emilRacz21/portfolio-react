@@ -1,6 +1,6 @@
 import { header } from "../../CONTENT";
 import { useEffect, useState } from "react";
-import "./Header.css";
+import "./Header.scss";
 export default function Header({ onSelect, selectedSection }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isHidden, setIsHidden] = useState(false);

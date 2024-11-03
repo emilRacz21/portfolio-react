@@ -1,5 +1,5 @@
 import { interests } from "../../CONTENT";
-import "./Interests.css";
+import "./Interests.scss";
 
 export default function Interests() {
   return (

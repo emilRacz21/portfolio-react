@@ -1,14 +1,14 @@
+@import "../../index.scss";
 header {
-  left: 0;
-  right: 0;
+  @include lef-right;
   position: fixed;
   height: 7rem;
   z-index: 1;
-  transition: 0.3s ease;
+  transition: $def-transition;
   display: flex;
   box-shadow: 1px 1px 10px 0.9px rgba(0, 0, 0, 0.225);
   justify-content: space-between;
-  background-color: rgb(235, 224, 202);
+  background-color: $header-color;
 }
 
 #mobile-burger {
@@ -21,24 +21,20 @@ header {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 5rem;
-  transition: 0.3s ease;
-}
+  transition: $def-transition;
 
-#logo-btn:focus {
-  border-radius: 50%;
-}
-
-#logo-btn:hover {
-  transform: scale(0.9);
+  &:focus {
+    border-radius: 50%;
+  }
+  &:hover {
+    transform: scale(0.9);
+  }
 }
 
 #my-logo {
   width: 4rem;
-  transition: 0.5s ease;
+  transition: $def-transition;
 }
 
 .ul-about-me {
@@ -55,22 +51,17 @@ header {
   padding: 10px 20px;
   border: none;
   background: transparent;
-  font-size: 1.4rem;
-  color: rgb(101, 88, 67);
+  font-size: $desc-font;
+  color: $main-color;
   cursor: pointer;
   margin-left: 2rem;
   list-style: none;
   transition: 0.3s ease;
-}
 
-.btn-menu:focus {
-  border-radius: 26px;
-  transform: scale(0.9);
-}
-
-.btn-menu:hover {
-  color: rgb(82, 72, 58);
-  transform: scale(0.9);
+  &:focus {
+    border-radius: 26px;
+    transform: scale(0.9);
+  }
 }
 
 #button-cv {
@@ -80,32 +71,27 @@ header {
   list-style: none;
   text-align: center;
   border-radius: 26px;
-  transition: 0.3s ease;
-  background-color: rgb(101, 88, 67);
-  color: rgb(255, 255, 255);
+  transition: $def-transition;
+  background-color: $main-color;
+  color: white;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: $desc-font;
   cursor: pointer;
 }
 
 @media (max-width: 1000px) {
   .ul-about-me {
     display: none;
-    transition: transform 0.3s ease;
+    transition: $def-transition;
   }
 
   .ul-about-me.active {
     opacity: 1;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    padding: 0;
+    @include displays;
+    @include height-width-v;
+    @include left-top-padding-margin-0;
     position: fixed;
-    left: 0;
-    margin: 0;
-    top: 0;
-    background-color: antiquewhite;
+    background-color: $main-color-white;
     justify-content: space-around;
     animation: menuin 0.5s forwards ease;
   }
@@ -150,45 +136,36 @@ header {
     border-radius: 0;
     border-bottom-width: 2rem;
     font-size: 1.7rem;
-    color: rgb(101, 88, 67);
+    color: $main-color;
     background-color: transparent;
-  }
-
-  #button-cv:hover {
-    background-color: transparent;
-    color: rgb(101, 88, 67);
   }
 
   #mobile-burger {
-    z-index: 1;
-    transition: 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    transition: $def-transition;
+    @include allCenter;
     width: 3rem;
+    z-index: 1;
     margin: 0.2rem;
     margin-right: 2rem;
     height: auto;
     cursor: pointer;
-  }
 
-  #mobile-burger span {
-    border-radius: 30px;
-    transition: 0.3s ease;
-    margin: 0.3rem;
-    display: flex;
-    align-items: center;
-    height: 0.35rem;
-    background-color: #655843;
-  }
-
-  #mobile-burger:hover {
-    transform: scale(0.9);
+    span {
+      border-radius: 30px;
+      transition: $def-transition;
+      margin: 0.3rem;
+      @include flex-align-center;
+      height: 0.35rem;
+      background-color: $main-color;
+    }
+    &:hover {
+      transform: scale(0.9);
+    }
   }
 
   .burger-open {
     transform: none;
-    transition: transform 0.3s ease;
+    transition: $def-transition;
   }
 
   .burger-open.burger-line-0.active {

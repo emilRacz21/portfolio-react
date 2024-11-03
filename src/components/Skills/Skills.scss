@@ -1,9 +1,10 @@
+@import "../../index.scss";
 #section-2 {
   padding: 0rem 4rem 2rem;
 }
 
 .skills-text-p {
-  font-size: 1.3rem;
+  font-size: $desc-font;
   text-align: center;
   margin-top: 1rem;
 }
@@ -11,9 +12,9 @@
 #section-2 h2 {
   margin-bottom: 0;
   font-weight: 700;
-  color: rgb(101, 88, 67);
+  color: $main-color;
   text-align: center;
-  font-size: 3rem;
+  font-size: $second-font;
 }
 
 .grid-2 {
@@ -27,12 +28,24 @@
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
   border-radius: 2%;
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.178);
-  background-color: antiquewhite;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: $main-color-white;
+  @include justify-align-flex-flex-center;
   margin: 3rem;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    width: 10rem;
+    padding: 1rem;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 200;
+    padding: 0rem 2rem;
+    padding-bottom: 2rem;
+    text-align: justify;
+  }
 }
 
 .skills-grid-2.visible {
@@ -40,46 +53,30 @@
   opacity: 1;
 }
 
-.skills-grid-2 img {
-  max-width: 100%;
-  height: auto;
-  width: 10rem;
-  padding: 1rem;
-}
-
-.skills-grid-2 p {
-  margin: 0;
-  font-weight: 200;
-  padding: 0rem 2rem;
-  padding-bottom: 2rem;
-  text-align: justify;
-}
-
 @media (max-width: 1000px) {
   #section-2 {
     padding: 2rem 0rem;
-  }
 
-  #section-2 p {
-    padding: 0 2rem;
-  }
+    p {
+      padding: 0 2rem;
+    }
 
-  #section-2 h2 {
-    font-size: 3.3rem;
-    margin: 0rem 2rem;
+    h2 {
+      font-size: 3.3rem;
+      margin: 0rem 2rem;
+    }
   }
 
   .grid-2 {
-    display: flex;
-    flex-direction: column;
+    @include displays;
   }
 
   .skills-grid-2 {
     border-radius: 0;
     margin: 2rem 0;
-  }
 
-  .skills-grid-2 p {
-    margin-bottom: 2rem;
+    p {
+      margin-bottom: 2rem;
+    }
   }
 }
