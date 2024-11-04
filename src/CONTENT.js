@@ -1,4 +1,5 @@
 import logo_h from "../src/assets/svg/logo_h.svg";
+import cepik from "../src/assets/projects_photo/cepik.png";
 
 export const header = {
   img: logo_h,
@@ -30,6 +31,7 @@ import api from "../src/assets/svg/api.svg";
 import java from "../src/assets/svg/java.svg";
 import python from "../src/assets/svg/python.svg";
 import c from "../src/assets/svg/c.svg";
+import xml from "../src/assets/svg/xml.svg";
 
 export const skillsSection = [
   {
@@ -308,5 +310,21 @@ export const projects = [
     live: "https://tanks-er.netlify.app/",
     source: "tanks-javascript",
     technology: [html, css, js],
+  },
+  {
+    title: "Aplikacja CEPIK",
+    desc: `Stworzyłem aplikację na Androida, która umożliwia użytkownikom wyszukiwanie 
+            informacji o pojazdach z bazy danych CEPiK. Użytkownicy mogą wprowadzać dane 
+            pojazdu, takie jak marka, model i rok produkcji, a także wybierać województwo 
+            i rodzaj paliwa. Aplikacja wykonuje zapytania do API, a wyniki są prezentowane 
+            w formie listy, z możliwością skopiowania ID pojazdu. Dodatkowo, istnieje funkcja 
+            wyszukiwania pojazdu po ID, co pozwala na szybki dostęp do szczegółowych informacji. 
+            Zastosowałem estetyczny interfejs i intuicyjną nawigację, aby zapewnić wygodne 
+            korzystanie z aplikacji.`,
+    alt: "Zdjęcie z aplikacją CEPIK",
+    img: cepik,
+    live: "https://github.com/emilRacz21/cepik-android",
+    source: "cepik-android",
+    technology: [android, xml, java, api],
   },
 ];
