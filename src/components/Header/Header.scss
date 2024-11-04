@@ -2,7 +2,8 @@
 header {
   @include lef-right;
   position: fixed;
-  height: 7rem;
+  height: 5.8vw;
+  min-height: 7rem;
   z-index: 1;
   transition: $def-transition;
   display: flex;

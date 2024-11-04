@@ -1,7 +1,8 @@
 @use "../../index.scss" as *;
 
 .author-section {
-  padding: 4rem;
+  padding: 2vw;
+  padding-top: 0;
   display: grid;
   @include justify-align-center;
   grid-template-columns: 1fr 1fr;
@@ -29,9 +30,8 @@
 
   .author-photo {
     padding: 2rem;
-    max-width: 100%;
     height: auto;
-    width: 44rem;
+    width: 80vh;
     animation: pulse 20s infinite;
   }
 
@@ -56,6 +56,7 @@
     }
 
     .author-photo {
+      width: 100vw;
       padding: 0;
       order: -1;
     }

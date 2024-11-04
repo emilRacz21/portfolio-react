@@ -3,7 +3,7 @@
   padding: 0rem 3rem 0rem 3rem;
 }
 .contact-grid {
-  padding: 4rem 0 0 0;
+  padding: 4vh 0 0 0;
   display: grid;
   @include justify-align-center;
   grid-template-columns: 1fr 1fr;
@@ -22,8 +22,8 @@
 }
 
 .contact-image {
-  width: 10rem;
-  height: 10rem;
+  width: 9vw;
+  height: 9vw;
 }
 
 .contact-title {
@@ -63,5 +63,9 @@
     background-color: transparent;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .contact-image {
+    width: 20vh;
+    height: 20vh;
   }
 }

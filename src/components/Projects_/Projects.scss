@@ -8,13 +8,13 @@
   font-weight: 900;
   text-align: center;
   font-size: $author-main-font;
-  margin-top: 2.5rem;
+  margin-top: 2.5vh;
   margin-bottom: 0;
 }
 
 .project-title {
   font-size: 1.3rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3.5vh;
   text-align: center;
 }
 
@@ -48,7 +48,7 @@
 
 .project-text {
   @include allCenter;
-  padding: 2rem;
+  padding: 2vw;
 
   h3 {
     font-weight: 800;
