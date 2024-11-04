@@ -1,4 +1,3 @@
-import myPhoto from "../../assets/my photo/PHOTO.png";
 import "./Author.scss";
 import { authorSection } from "../../CONTENT";
 
@@ -9,7 +8,7 @@ export default function Author() {
         <h1>{authorSection.title}</h1>
         <p>{authorSection.about}</p>
       </div>
-      <img src={myPhoto} alt="Author" className="author-photo" />
+      <img src={authorSection.img} alt="Author" className="author-photo" />
     </section>
   );
 }

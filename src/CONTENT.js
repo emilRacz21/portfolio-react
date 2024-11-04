@@ -1,10 +1,11 @@
-import logo from "../src/assets/logo/LOGO_BROWN.png";
+import logo_h from "../src/assets/svg/logo_h.svg";
 
 export const header = {
-  img: logo,
+  img: logo_h,
   alt: "Logo strony w nagłówku strony",
   buttons: ["Start", "Projekty", "Kontakt", "Pobierz CV"],
 };
+import myPhoto from "../src/assets/photo/author.png";
 
 export const authorSection = {
   title: "Witam cię na mojej stronie!",
@@ -18,18 +19,21 @@ export const authorSection = {
             frameworkowi mogę realizować coraz bardziej zaawansowane projekty,
             ciągle poszerzając swoją wiedzę.`,
   alt: "zdjęcie autora strony internetowej powiększające się powoli i zmniejszające się",
+  img: myPhoto,
 };
 
-import htmlLhoto from "../src/assets/skills/HTML.png";
-import cssLhoto from "../src/assets/skills/CSS.png";
-import jsLogo from "../src/assets/skills/JS.png";
-import javaLogo from "../src/assets/skills/JAVA.png";
-import pythonLogo from "../src/assets/skills/PYTHON.png";
-import cLogo from "../src/assets/skills/C.png";
+import sass from "../src/assets/svg/sass.svg";
+import css from "../src/assets/svg/css.svg";
+import html from "../src/assets/svg/html.svg";
+import js from "../src/assets/svg/js.svg";
+import api from "../src/assets/svg/api.svg";
+import java from "../src/assets/svg/java.svg";
+import python from "../src/assets/svg/python.svg";
+import c from "../src/assets/svg/c.svg";
 
 export const skillsSection = [
   {
-    img: htmlLhoto,
+    img: html,
     alt: "Obraz przedstawiający logo HTML",
     about: `HTML (HyperText Markup Language) to podstawowy język służący do
             tworzenia stron internetowych. Określa strukturę treści na stronie
@@ -40,7 +44,7 @@ export const skillsSection = [
             struktura składa się z elementów head i body.`,
   },
   {
-    img: cssLhoto,
+    img: css,
     alt: "Obraz przedstawiający logo CSS",
     about: `CSS (Cascading Style Sheets) to język używany do opisywania wyglądu
             i formatu dokumentów HTML. Umożliwia oddzielenie treści od
@@ -52,7 +56,7 @@ export const skillsSection = [
             ekranów.`,
   },
   {
-    img: jsLogo,
+    img: js,
     alt: "Obraz przedstawiający logo języka JavaScript",
     about: `JavaScript (JS) to język programowania, który umożliwia tworzenie
             interaktywnych elementów na stronach internetowych. Jest jednym z
@@ -64,7 +68,7 @@ export const skillsSection = [
             idealnym do budowy aplikacji webowych.`,
   },
   {
-    img: javaLogo,
+    img: java,
     alt: "Obraz przedstawiający logo języka Java",
     about: `Java to wieloplatformowy język programowania, który został stworzony
             przez firmę Sun Microsystems w 1995 roku, a obecnie jest rozwijany
@@ -75,7 +79,7 @@ export const skillsSection = [
             systemów korporacyjnych i aplikacji mobilnych na platformę Android.`,
   },
   {
-    img: pythonLogo,
+    img: python,
     alt: "Obraz przedstawiający logo języka Python",
     about: `Python to interpretowany, dynamiczny język programowania o prostym i
             czytelnym składniowo kodzie, stworzony przez Guido van Rossuma w
@@ -86,7 +90,7 @@ export const skillsSection = [
             wśród początkujących, jak i zaawansowanych programistów.`,
   },
   {
-    img: cLogo,
+    img: c,
     alt: "Obraz przedstawiający logo języka C",
     about: `C to kompilowany, proceduralny język programowania, stworzony w
             latach 70. przez Dennisa Ritchie w Bell Labs, głównie z myślą o
@@ -98,23 +102,23 @@ export const skillsSection = [
   },
 ];
 
-import reactLogo from "../src/assets/learn/REACT.png";
-import androidLogo from "../src/assets/learn/ANDROID.png";
-import windowsLogo from "../src/assets/learn/WINDOWS.png";
+import react from "../src/assets/svg/react.svg";
+import android from "../src/assets/svg/android.svg";
+import windows from "../src/assets/svg/windows.svg";
 
 export const developedSkills = [
   {
-    img: reactLogo,
+    img: react,
     alt: "Obraz przedstawiający logo języka React",
     name: "React",
   },
   {
-    img: androidLogo,
+    img: android,
     alt: "Obraz przedstawiający logo Android Studio",
     name: "Android Studio w Java",
   },
   {
-    img: windowsLogo,
+    img: windows,
     alt: "Obraz przedstawiający logo Windows Server",
     name: "Windows Server",
   },
@@ -145,10 +149,10 @@ export const interests = {
   ],
 };
 
-import logoWheat from "../src/assets/logo/LOGO_WHEAT.png";
+import logo_f from "../src/assets/svg/logo_f.svg";
 
 export const footer = {
-  img: logoWheat,
+  img: logo_f,
   alt: "Logo strony w stopce strony",
   name: "Emil Raczkiewicz",
   address: "Rzeszów",
@@ -161,35 +165,35 @@ export const footer = {
   mail: "emil.raczkiewicz@gmail.com",
 };
 
-import contactLogo from "../src/assets/icons/CONTACT.png";
-import phonetLogo from "../src/assets/icons/PHONE.png";
-import mailLogo from "../src/assets/icons/MAIL.png";
-import gitHubLogo from "../src/assets/icons/GITHUB.png";
+import contactl from "../src/assets/svg/contact.svg";
+import phone from "../src/assets/svg/phone.svg";
+import maill from "../src/assets/svg/mail.svg";
+import github from "../src/assets/svg/github.svg";
 
 export const contact = [
   {
-    img: contactLogo,
+    img: contactl,
     alt: "ikonka kontaktu",
     title: "Imie i nazwisko",
     desc: "Emil Raczkiewicz",
     href: "tel:506318498",
   },
   {
-    img: phonetLogo,
+    img: phone,
     alt: "ikonka telefonu",
     title: "Telefon",
     desc: "+48 506 318 498",
     href: "tel:506318498",
   },
   {
-    img: mailLogo,
+    img: maill,
     alt: "ikonka e-mail",
     title: "Adres e-mail",
     desc: "emil.raczkiewicz@gmail.com",
     href: "mailto:emil.raczkiewicz@gmail.com",
   },
   {
-    img: gitHubLogo,
+    img: github,
     alt: "ikonka GitHub",
     title: "GitHub",
     desc: "Emil Raczkiewicz",
@@ -197,12 +201,12 @@ export const contact = [
   },
 ];
 
-import instagramProject from "../src/assets/projects/INSTAGRAM.png";
-import quizProject from "../src/assets/projects/QUIZ.png";
-import gameProject from "../src/assets/projects/2D-Game.png";
-import calcProject from "../src/assets/projects/CALCULATOR.png";
-import ticTacToeProject from "../src/assets/projects/TICTACTOE.png";
-import tanksProject from "../src/assets/projects/TANKS.png";
+import instagramProject from "../src/assets/projects_photo/instagram.png";
+import quizProject from "../src/assets/projects_photo/quiz.png";
+import gameProject from "../src/assets/projects_photo/game.png";
+import calcProject from "../src/assets/projects_photo/calculator.png";
+import ticTacToeProject from "../src/assets/projects_photo/tictactoe.png";
+import tanksProject from "../src/assets/projects_photo/tanks.png";
 
 export const projectTitle = `Wykonane aplikacje webowe wykorzystują technologie JavaScript, React, HTML i CSS, i nie tylko.`;
 export const projects = [
@@ -221,6 +225,7 @@ export const projects = [
     img: instagramProject,
     live: "https://instaike-scroll-er.netlify.app/",
     source: "instagram-javascript",
+    technology: [html, sass, js, api],
   },
   {
     title: "Gra w Quiz",
@@ -238,6 +243,7 @@ export const projects = [
     img: quizProject,
     live: "https://quiz-game-er.netlify.app/",
     source: "quiz-javascript",
+    technology: [html, css, js, api],
   },
   {
     title: "Gra w 2D",
@@ -254,6 +260,7 @@ export const projects = [
     img: gameProject,
     live: "https://github.com/emilRacz21/Blob-runner",
     source: "Blob-runner",
+    technology: [html, css, js],
   },
   {
     title: "Kalkulator",
@@ -270,6 +277,7 @@ export const projects = [
     img: calcProject,
     live: "https://calculator-project-er.netlify.app/",
     source: "calculator-javascript",
+    technology: [html, css, js],
   },
   {
     title: "Gra w kółko i krzyżyk",
@@ -283,6 +291,7 @@ export const projects = [
     img: ticTacToeProject,
     live: "https://tic-tac-toe-er.netlify.app/",
     source: "ticTacToe-javascript",
+    technology: [html, css, js],
   },
   {
     title: "Gra w Statki",
@@ -298,5 +307,6 @@ export const projects = [
     img: tanksProject,
     live: "https://tanks-er.netlify.app/",
     source: "tanks-javascript",
+    technology: [html, css, js],
   },
 ];

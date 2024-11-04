@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@use "../../index.scss" as *;
 
 .developed-skills-section {
   padding: 4rem;
@@ -20,6 +20,7 @@
 
   .skills-grid {
     @include flex-justify-center;
+    justify-content: space-around;
 
     .skill-item {
       transform: scale(0) translateY(20px);
@@ -41,7 +42,7 @@
 
   .skills-image {
     margin: 2rem;
-    width: 30%;
+    width: $img-size;
   }
 
   @media (max-width: 1000px) {

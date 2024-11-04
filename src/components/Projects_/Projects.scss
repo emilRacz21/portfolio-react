@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@use "../../index.scss" as *;
 .projects-section {
   padding: 0;
 }
@@ -33,6 +33,18 @@
     object-fit: cover;
   }
 }
+.projects-technology {
+  margin-bottom: 1rem;
+  p {
+    margin: 0 0 0.5rem 0;
+  }
+  img {
+    margin-right: 0.9rem;
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+  }
+}
 
 .project-text {
   @include allCenter;
@@ -50,34 +62,35 @@
   }
 }
 
-.project-btn-live,
-.project-btn-source-code {
-  border-radius: 5px;
-}
+.project-buttons {
+  .project-btn-live {
+    border: 1.9px solid $main-color;
+    border-radius: 5px;
+    color: $main-color;
+    padding: 1.3vh 1vw;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
 
-.project-btn-live {
-  border: 1.9px solid $main-color;
-  color: $main-color;
-  padding: 1.3vh 1vw;
-  background-color: transparent;
-  cursor: pointer;
-  transition: 0.3s ease;
-
-  &:hover {
-    transform: scale(0.9);
+    &:hover {
+      color: white;
+      background-color: $main-color;
+    }
   }
-}
 
-.project-btn-source-code {
-  padding: 0 1rem;
-  border: none;
-  background-color: transparent;
-  color: $main-color;
-  transition: 0.3s ease;
-  cursor: pointer;
+  .project-btn-source-code {
+    padding: 0 1rem;
+    border-radius: 5px;
+    border: none;
+    padding: 1.3vh 1vw;
+    background-color: transparent;
+    color: $main-color;
+    transition: 0.3s ease;
+    cursor: pointer;
 
-  &:hover {
-    transform: scale(0.9);
+    &:hover {
+      transform: scale(1.04);
+    }
   }
 }
 

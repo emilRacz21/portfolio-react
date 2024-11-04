@@ -11,6 +11,12 @@ export default function Projects() {
           <div className="project-text">
             <h3>{item.title}</h3>
             <p>{item.desc}</p>
+            <div className="projects-technology">
+              <p>Użyte technologie:</p>
+              {item.technology.map((items, index) => {
+                return <img key={index} src={items} alt="technology" />;
+              })}
+            </div>
             <div className="project-buttons">
               <button
                 onClick={() => window.open(item.live)}

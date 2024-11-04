@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@use "../../index.scss" as *;
 #section-2 {
   padding: 0rem 4rem 2rem;
 }
@@ -35,7 +35,7 @@
   img {
     max-width: 100%;
     height: auto;
-    width: 10rem;
+    width: $img-size;
     padding: 1rem;
   }
 

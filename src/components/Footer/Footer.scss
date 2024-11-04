@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@use "../../index.scss" as *;
 
 .footer {
   color: $container-color;
@@ -11,6 +11,7 @@
   .footer-logo {
     min-width: 4.4rem;
   }
+
   @media (max-width: 1000px) {
     @include displays;
     padding: 0;
