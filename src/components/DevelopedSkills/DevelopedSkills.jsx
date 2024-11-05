@@ -1,47 +1,52 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useRef, useState } from "react";
 import { developedSkills } from "../../CONTENT";
 import "./DevelopedSkills.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useEffect, useState } from "react";
 
-export default function DevelopedSkills() {
-  const skillRefs = useRef([]);
-  const [hasCheckedVisibility, setHasCheckedVisibility] = useState(false);
+const DevelopedSkills = () => {
+  const [sliderSettings, setSliderSettings] = useState({
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  });
+
+  const updateSliderSettings = () => {
+    if (window.innerWidth < 1000) {
+      setSliderSettings({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        vertical: true,
+        verticalSwiping: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
+    } else {
+      setSliderSettings({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToScroll: 3,
+      });
+    }
+  };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (hasCheckedVisibility) return;
-
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            skillRefs.current.forEach((skill) => {
-              skill.classList.add("visible");
-            });
-            setHasCheckedVisibility(true);
-            observer.disconnect();
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-      }
-    );
-
-    skillRefs.current.forEach((skill) => {
-      if (skill) {
-        observer.observe(skill);
-      }
-    });
-
+    updateSliderSettings();
+    window.addEventListener("resize", updateSliderSettings);
     return () => {
-      skillRefs.current.forEach((skill) => {
-        if (skill) {
-          observer.unobserve(skill);
-        }
-      });
-      observer.disconnect();
+      window.removeEventListener("resize", updateSliderSettings);
     };
-  }, [hasCheckedVisibility]);
+  }, []);
 
   return (
     <section className="developed-skills-section">
@@ -49,21 +54,18 @@ export default function DevelopedSkills() {
       <p>
         Nieustannie rozwijam swoje pasje i umiejętności, aby osiągać nowe cele.
       </p>
-      <div className="skills-grid">
-        {developedSkills.map((item, index) => (
-          <div
-            key={index}
-            className="skill-item"
-            ref={(el) => (skillRefs.current[index] = el)}
-            style={{
-              transitionDelay: `${index * 100}ms`,
-            }}
-          >
-            <img src={item.img} alt={item.alt} className="skills-image" />
-            <p>{item.name}</p>
-          </div>
-        ))}
+      <div className="skills-slider">
+        <Slider {...sliderSettings}>
+          {developedSkills.map((item, index) => (
+            <div key={index} className="skill-item">
+              <img src={item.img} alt={item.alt} className="skills-image" />
+              <p>{item.name}</p>
+            </div>
+          ))}
+        </Slider>
       </div>
     </section>
   );
-}
+};
+
+export default DevelopedSkills;

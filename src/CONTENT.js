@@ -107,6 +107,11 @@ export const skillsSection = [
 import react from "../src/assets/svg/react.svg";
 import android from "../src/assets/svg/android.svg";
 import windows from "../src/assets/svg/windows.svg";
+import threejs from "../src/assets/svg/threejs.svg";
+import tailwindcss from "../src/assets/svg/tailwindcss.svg";
+import mongodb from "../src/assets/svg/mongodb.svg";
+import premiere from "../src/assets/svg/premiere.svg";
+import photoshop from "../src/assets/svg/photoshop.svg";
 
 export const developedSkills = [
   {
@@ -123,6 +128,36 @@ export const developedSkills = [
     img: windows,
     alt: "Obraz przedstawiający logo Windows Server",
     name: "Windows Server",
+  },
+  {
+    img: sass,
+    alt: "Obraz przedstawiający logo Sass",
+    name: "SCSS",
+  },
+  {
+    img: tailwindcss,
+    alt: "Obraz przedstawiający logo Tailwind CSS",
+    name: "Tailwind CSS",
+  },
+  {
+    img: threejs,
+    alt: "Obraz przedstawiający logo Three.js",
+    name: "Three.js",
+  },
+  {
+    img: mongodb,
+    alt: "Obraz przedstawiający logo MongoDB",
+    name: "MongoDB",
+  },
+  {
+    img: photoshop,
+    alt: "Obraz przedstawiający logo Adobe Photoshop",
+    name: "Adobe Photoshop",
+  },
+  {
+    img: premiere,
+    alt: "Obraz przedstawiający logo Adobe Premiere",
+    name: "Adobe Premiere",
   },
 ];
 export const interests = {
