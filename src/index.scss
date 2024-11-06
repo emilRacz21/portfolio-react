@@ -13,6 +13,8 @@ $author-main-font: 7.8vh;
 $author-p-font: 1.55rem;
 $mobile-second-font: 3.5rem;
 $def-transition: 0.3s ease;
+$button-radius: 5px;
+$button-padding: 1.3vh 1vw;
 
 @mixin displays {
   display: flex;

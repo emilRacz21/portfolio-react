@@ -1,34 +1,48 @@
 @use "../../index.scss" as *;
 .contact-section {
-  padding: 0rem 3rem 0rem 3rem;
+  padding: 9vh 10rem 0 10rem;
 }
 .contact-grid {
-  padding: 4vh 0 0 0;
-  display: grid;
-  @include justify-align-center;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+
+  flex-direction: column;
+
+  h2 {
+    font-size: $author-main-font;
+    margin: 0;
+    font-weight: 900;
+    color: $main-color;
+  }
+  p {
+    font-size: $author-p-font;
+    text-align: justify;
+    margin-right: 5rem;
+  }
 }
 
 .contact-item {
-  @include justify-align-flex-flex-center;
-  margin: 1rem;
+  margin: 0.7rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
   font-size: $desc-font;
 }
 
 .contact-details {
-  padding: 2rem;
+  padding: 1rem;
   @include displays;
-  align-items: center;
+  align-items: start;
 }
 
 .contact-image {
-  width: 9vw;
-  height: 9vw;
+  width: 4vw;
+  height: 4vw;
 }
 
 .contact-title {
   color: $main-color;
-  font-size: $second-font;
+  font-size: 1vw;
   font-weight: 900;
   margin: 0;
 }
@@ -45,24 +59,46 @@
   color: black;
 }
 
+.contact-forms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 @media (max-width: 1000px) {
   .contact-section {
     padding: 0;
   }
-
-  .contact-grid {
-    padding: 2rem 0;
-    @include displays;
+  .contact-forms {
+    display: flex;
+    flex-direction: column;
   }
+  .contact-grid {
+    padding: 2rem;
+    @include displays;
 
-  .contact-title {
-    text-align: center;
+    h2 {
+      text-align: center;
+    }
+    p {
+      margin: 1rem;
+    }
   }
 
   .contact-item {
     background-color: transparent;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-overflow: ellipsis;
+
+    .contact-details {
+      align-items: center;
+
+      .contact-title {
+        font-size: 2.4rem;
+      }
+    }
   }
   .contact-image {
     width: 20vh;
