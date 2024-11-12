@@ -33,6 +33,7 @@ export default function Form() {
       );
     });
   }
+
   return (
     <form name="form" onSubmit={(e) => Submit(e)}>
       <h2>Formularz</h2>
