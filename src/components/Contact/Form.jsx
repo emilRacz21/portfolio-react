@@ -18,7 +18,9 @@ export default function Form() {
     const formEle = document.querySelector("form");
     const formDatab = new FormData(formEle);
     fetch(
-      "https://script.google.com/macros/s/AKfycbxD5e9tm9_YiKpYUqHNr8_ErzeLkFFNpQ7_uiZIMVK8OTKKPeob3FumvlMRNLcItu_S/exec",
+      `https://script.google.com/macros/s/${
+        import.meta.env.VITE_FORM_KEY
+      }/exec`,
       {
         method: "POST",
         body: formDatab,
