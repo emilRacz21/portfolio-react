@@ -28,6 +28,7 @@ import css from "../src/assets/svg/css.svg";
 import html from "../src/assets/svg/html.svg";
 import js from "../src/assets/svg/js.svg";
 import api from "../src/assets/svg/api.svg";
+import nodejs from "../src/assets/svg/nodejs.svg";
 import java from "../src/assets/svg/java.svg";
 import python from "../src/assets/svg/python.svg";
 import c from "../src/assets/svg/c.svg";
@@ -244,9 +245,24 @@ import gameProject from "../src/assets/projects_photo/game.png";
 import calcProject from "../src/assets/projects_photo/calculator.png";
 import ticTacToeProject from "../src/assets/projects_photo/tictactoe.png";
 import tanksProject from "../src/assets/projects_photo/tanks.png";
+import shop from "../src/assets/projects_photo/shop.png";
 
 export const projectTitle = `Wykonane aplikacje webowe wykorzystują technologie JavaScript, React, HTML i CSS, i nie tylko.`;
 export const projects = [
+  {
+    title: "Sklep Internetowy",
+    desc: ` Stworzyłem sklep internetowy oparty o autorskie RESTful API zbudowane przy użyciu Node.js hostowane na 
+    platformie Glitch API wykorzystuje bazę danych opartą na MongoDB Funkcjonalności aplikacji obejmują pobieranie 
+    listy dostępnych przedmiotów w sklepie dodawanie nowych przedmiotów do bazy danych edycję i usuwanie istniejących 
+    przedmiotów oraz możliwość dodawania komentarzy i ocen do produktów Dzięki intuicyjnej strukturze API oraz 
+    wykorzystaniu nowoczesnych narzędzi aplikacja zapewnia stabilność i możliwość dalszej rozbudowy Sklep wspiera 
+    zarządzanie obrazami produktów korzystając z biblioteki multer oraz pozwala na pełną kontrolę nad danymi produktów. Produkty można dodawać do koszyka i "kupować".`,
+    alt: "Zdjęcie z moją wersją instagram",
+    img: shop,
+    live: "https://oddityshop.netlify.app/",
+    source: "oddity-emporium-react",
+    technology: [html, sass, js, api, react, mongodb, nodejs],
+  },
   {
     title: "Projekt Instagram",
     desc: ` Stworzyłem aplikację typu infinite scroll, inspirowaną Instagramem,
