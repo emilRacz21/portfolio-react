@@ -113,6 +113,7 @@ import tailwindcss from "../src/assets/svg/tailwindcss.svg";
 import mongodb from "../src/assets/svg/mongodb.svg";
 import premiere from "../src/assets/svg/premiere.svg";
 import photoshop from "../src/assets/svg/photoshop.svg";
+import sqlite from "../src/assets/svg/sqlite-icon.svg";
 
 export const developedSkills = [
   {
@@ -246,6 +247,7 @@ import calcProject from "../src/assets/projects_photo/calculator.png";
 import ticTacToeProject from "../src/assets/projects_photo/tictactoe.png";
 import tanksProject from "../src/assets/projects_photo/tanks.png";
 import shop from "../src/assets/projects_photo/shop.png";
+import schedule from "../src/assets/projects_photo/schedule.png";
 
 export const projectTitle = `Wykonane aplikacje webowe wykorzystują technologie JavaScript, React, HTML i CSS, i nie tylko.`;
 export const projects = [
@@ -377,5 +379,20 @@ export const projects = [
     live: "https://github.com/emilRacz21/cepik-android",
     source: "cepik-android",
     technology: [android, xml, java, api],
+  },
+  {
+    title: "Dziennik elektroniczny",
+    desc: `Ta aplikacja pozwala użytkownikowi zarządzać swoimi zajęciami, ocenami, profilem i preferencjami 
+            językowymi w prosty sposób. Główne funkcjonalności obejmują możliwość przeglądania planu zajęć, 
+            gdzie użytkownik może zobaczyć zajęcia w formie listy, kliknąć na konkretne zajęcia i przejść do 
+            szczegółów. Użytkownik ma także możliwość edytowania swojego profilu, zmiany języka aplikacji 
+            oraz korzystania z różnych ustawień dostępnych w zakładce "Więcej". Aplikacja wykorzystuje 
+            bazę danych SQLite do przechowywania informacji o zajęciach. Dzięki integracji z kalendarzem, użytkownik
+            może łatwo dodać nowe zajęcia do swojego planu.`,
+    alt: "Zdjęcie z aplikacją dziennik elektroniczny",
+    img: schedule,
+    live: "https://github.com/emilRacz21/lessonApp-android",
+    source: "lessonApp-android",
+    technology: [android, xml, java, api, sqlite],
   },
 ];
